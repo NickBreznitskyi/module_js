@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    let array = [
+        Math.random(), Math.random(), Math.random(),
+        Math.random(), Math.random(), Math.random(),
+        Math.random(), Math.random(), Math.random(), Math.random()
+    ]
+    let result = array[0] + array[1] + array[2] + array[3] + array[4]
+        + array[5] + array[6] + array[7] + array[8] + array[9];
+    console.log(result)
+
+
+    let book1 = {
+        name: 'wet_dog',
+        numberPages: 200,
+        genre: 'classic'
+    }
+    let book2 = {
+        name: 'wet_cat',
+        numberPages: 100,
+        genre: 'classic',
+        author: 'Chuvak'
+    }
+
+    let arrayBook = [
+        {
+            name: 'wet_dog',
+            numberPages: 200,
+            genre: 'classic',
+            author: 'Chuvak'
+        },
+        {
+            name: 'wet_kitty',
+            numberPages: 300,
+            genre: 'classic',
+            author: 'Chuvak'
+        }
+    ]
+    console.log(arrayBook[0])
+    console.log(arrayBook[1])
+
+
+    // площа прямокутника
+    let height = 23;
+    let width = 10;
+    let s = height * width;
+    console.log(s);
+
+    //об'єм циліндра
+    let heightC = 10;
+    let dC = 4;
+    let rC = dC / 2;
+    let v = Math.round(Math.PI * (rC ** 2) * heightC);
+    console.log(v)
+
+    //Знайти гіпотенузу
+    let n = 3;
+    let m = 4;
+    let k = Math.sqrt(n ** 2 + m ** 2);
+    console.log(k);
+
+
+</script>
+</body>
+</html>
