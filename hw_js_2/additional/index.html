@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+<script>
+    //Task_1
+    //- Нам дано масив друзів let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"]; Потрібно зробити перевірку якщо
+    // кількість елементів у масиві більше або дорівнює 3, то виводиться повідомлення про те, що це великий масив, в якому  3 і більше елементи.
+    //     Інакше слід вивести на екран повідомлення про те, що це маленький масив, в якому менше 3-х елементів.
+
+    let friends = ["Ivan", "Slavik", "Grisha", "Lera", "Ira"];
+    if (friends.length >= 2) {
+        console.log('це великий масив, в якому  3 і більше елементи')
+    } else {
+        console.log('це маленький масив, в якому менше 3-х елементів')
+    }
+
+    friends.length >= 2 ? console.log('це великий масив, в якому  3 і більше елементи') : console.log('це маленький масив, в якому менше 3-х елементів')
+
+
+    //Task_2
+    // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
+    //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
+
+
+    let a = 3;
+    let b = 6;
+    let c = 1;
+
+    if ((a < b && a > c) || (a > b && a < c)) {
+        console.log('Число a є середнім');
+        console.log('перше число між двома іншими.')
+    } else if ((b < a && b > c) || (b > a && b < c)) {
+        console.log('Число b є середнім');
+        console.log('перше число не між двома іншими.')
+    } else if ((c < a && c > b) || (c > a && c < b)) {
+        console.log('Число c є середнім');
+        console.log('перше число не між двома іншими.')
+    }
+
+
+    //Task_3
+    //- Перепишіть конструкцію if з використанням умовного оператора '?':
+    let result;
+    // if (a + b < 4) {
+    //     result = 'Мало';
+    // } else {
+    //     result = 'Багато';
+    // }
+
+    a + b < 4 ? result = 'Мало' : result = 'Багато';
+    console.log(result);
+
+
+    //Task_4
+    //- Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
+    // напишіть це тернарним оператором
+
+
+    let number = -1000;
+    number < 0 && number > -101 ? console.log('negitive') : number == 0 ? console.log('zero') :
+        number > 0 && number < 101 ? console.log('positive') : console.log('Число виходить за межі');
+</script>
+</body>
+</html>
