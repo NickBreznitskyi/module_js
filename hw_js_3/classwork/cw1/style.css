@@ -1,0 +1,40 @@
+body {
+    background-color: cornflowerblue;
+}
+
+.simpsons__block {
+    margin: 50px;
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo {
+    width: 200px;
+    height: 400px;
+}
+
+.product-card {
+    background-color: silver;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-title {
+    text-align: center;
+}
+
+.product-image {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+}

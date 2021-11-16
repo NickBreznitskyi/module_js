@@ -1,0 +1,14 @@
+.users-box {
+    display: grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+.user-block {
+    background-color: silver;
+    padding-left: 10px;
+}
