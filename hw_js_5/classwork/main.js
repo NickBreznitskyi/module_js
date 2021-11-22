@@ -1,6 +1,6 @@
 //створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
 
-function min(a, b, c) {
+let min = (a, b, c) => {
     if (a < b && a < c) {
         return a;
     } else if (b < a && b < c) {
@@ -10,11 +10,11 @@ function min(a, b, c) {
     }
 }
 
-console.log(min(23, 467, 12));
+console.log(min(3433, 464, 12342));
 console.log('==============');
 
-//створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
-function max(a, b, c) {
+////створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+let max = (a, b, c) => {
     if (a > b && a > c) {
         return a;
     } else if (b > a && b > c) {
@@ -24,14 +24,14 @@ function max(a, b, c) {
     }
 }
 
-console.log(max(25, 575, 120));
+console.log(max(236, 69543, 14));
 console.log('==============');
 
 //створити функцію яка повертає найбільше число з масиву
 //створити функцію яка повертає найменьше число з масиву
-let arrayNumber = [123, 4574, 233, 16, 323, 23];
+let arrayNumber = [238, 9436, 567, 122, 965, 8754];
 
-function maxInArray(arr) {
+let maxInArray = (arr) => {
     let max = arr[0];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] > max) {
@@ -41,7 +41,7 @@ function maxInArray(arr) {
     return max;
 }
 
-function minInArray(arr) {
+let minInArray = (arr) => {
     let min = arr[0];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] < min) {
@@ -58,7 +58,7 @@ console.log('==============');
 
 
 //створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
-function arraySum(arr) {
+let arraySum = (arr) => {
     let sum = 0;
     for (const arrElement of arr) {
         sum += arrElement;
@@ -70,7 +70,7 @@ console.log(arraySum(arrayNumber));
 console.log('==============');
 
 //створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
-function arithmeticMean(arr) {
+let arithmeticMean = (arr) => {
     let sum = 0;
     for (const arrElement of arr) {
         sum += arrElement;
@@ -82,56 +82,56 @@ console.log(arithmeticMean(arrayNumber));
 console.log('==============');
 
 //створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
-function minMax() {
-    let min = arguments[0];
-    let max = arguments[0];
-    for (let i = 0; i < arguments.length; i++) {
-        if (arguments[i] > max) {
-            max = arguments[i];
+let minMax = (...arr) => {
+    let min = arr[0];
+    let max = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
         }
     }
     console.log(max);
-    for (let i = 0; i < arguments.length; i++) {
-        if (arguments[i] < min) {
-            min = arguments[i];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
         }
     }
     return min;
 }
 
-console.log(minMax(144, 457, 2, 12, 2546, 79, 23));
+console.log(minMax(342, 797, 235, 6993, 32, 653, 904));
 console.log('==============');
 
 
 //створити функцію яка заповнює масив рандомними числами
 let emptyArray = [];
 
-function randomArray(arr, length) {
+let randomArray = (arr, length) => {
     for (let i = 0; i < length; i++) {
         arr[i] = Math.round(Math.random() * 100);
     }
     return arr;
 }
 
-console.log(randomArray(emptyArray, 10));
+console.log(randomArray(emptyArray, 5));
 console.log('==============');
 
 //створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit.
 // limit - аргумент, який характеризує кінцеве значення діапазону.
 let arrayEmpty = [];
 
-function randomArrayLimit(arr, length, limit) {
+let randomArrayLimit = (arr, length, limit) => {
     for (let i = 0; i < length; i++) {
         arr[i] = Math.round(Math.random() * limit);
     }
     return arr;
 }
 
-console.log(randomArrayLimit(emptyArray, 10, 1000));
+console.log(randomArrayLimit(emptyArray, 5, 500));
 console.log('==============');
 
 //Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
-function arrayReverse(arr) {
+let arrayReverse = (arr) => {
     let arrayEmptyReverse = []
     for (let i = arr.length - 1; i >= 0; i--) {
         arrayEmptyReverse.push(arr[i]);
