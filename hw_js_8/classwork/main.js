@@ -2,7 +2,7 @@
 // 1) Напишіть код, який :
 //     a) змінює колір тексту елемнту з ід main_header на назву групи в якій ви вчитесь (mon-year)
 let header = document.getElementById('main_header');
-header.style.color = 'sept-2021-js';
+header.classList.add('sept-2021-js')
 
 //b) робить шириниу елементу ul 400px
 
