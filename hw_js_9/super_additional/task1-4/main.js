@@ -62,6 +62,9 @@ for (const user of users) {
 }
 console.log(address);
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement. Всі данні в одному блоці.
+let task = document.createElement("h2");
+task.innerText = '===========';
+document.body.appendChild(task);
 for (const user of users) {
     let wrap = document.createElement('div');
     for (const userKey in user) {
@@ -75,6 +78,8 @@ for (const user of users) {
     }
     document.body.appendChild(wrap);
 }
+let task1 = task.cloneNode(true);
+document.body.appendChild(task1);
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам (div>div*4)
 for (const user of users) {
     let wrapUser = document.createElement('div');
@@ -91,24 +96,25 @@ for (const user of users) {
     }
     document.body.appendChild(wrapUser);
 }
+let task2 = task.cloneNode(true);
+document.body.appendChild(task2);
 
 // - За допомоги циклу проітерувати  масив users, записати кожного юзера в сівй блок за допомоги document.createElement, розділивши всі властивості по своїм блокам , блок з адресою зробити окремим блоком, з блоками для кожної властивості
+function fn(object, wrap) {
+    for (const objectKey in object) {
+        let objectKeyElement = document.createElement("div");
+        if (typeof object[objectKey] === "object") {
+            fn(object[objectKey], objectKeyElement);
+        } else {
+            objectKeyElement.innerText += object[objectKey];
+        }
+        wrap.appendChild(objectKeyElement);
+    }
+}
 
 for (const user of users) {
     let wrapUser = document.createElement('div');
-    for (const userKey in user) {
-        let wrapUserElement = document.createElement("div");
-        if (typeof user[userKey] === "object") {
-            for (const userElementKey in user[userKey]) {
-                let wrapAddress = document.createElement("div")
-                wrapAddress.innerText += user[userKey][userElementKey];
-                wrapUserElement.appendChild(wrapAddress)
-            }
-
-        } else {
-            wrapUserElement.innerText += user[userKey];
-        }
-        wrapUser.appendChild(wrapUserElement);
-    }
     document.body.appendChild(wrapUser);
+    fn(user, wrapUser);
+
 }
