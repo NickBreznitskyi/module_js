@@ -24,7 +24,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
             divPost.appendChild(btnComments);
             btnComments.onclick = () => {
                 let wrapAllComments = document.createElement("div");
-                document.body.appendChild(wrapAllComments);
+                divPost.appendChild(wrapAllComments);
                 fetch('https://jsonplaceholder.typicode.com/comments')
                     .then(response => response.json())
                     .then(commentsList => {

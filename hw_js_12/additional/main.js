@@ -32,7 +32,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             wrap.appendChild(btnUser);
             btnUser.onclick = () => {
                 let postOfUserWrap = document.createElement("div");
-                document.body.appendChild(postOfUserWrap);
+                wrap.appendChild(postOfUserWrap);
                 fetch('https://jsonplaceholder.typicode.com/posts')
                     .then(response => response.json())
                     .then(postsList => {
@@ -51,7 +51,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
                             divPost.appendChild(btnPost);
                             btnPost.onclick = () => {
                                 let wrapAllComments = document.createElement("div");
-                                document.body.appendChild(wrapAllComments);
+                                divPost.appendChild(wrapAllComments);
                                 fetch('https://jsonplaceholder.typicode.com/comments')
                                     .then(response => response.json())
                                     .then(commentsList => {
